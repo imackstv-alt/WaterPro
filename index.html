@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WaterPro | Tu Blog de Natación Profesional</title>
+    <style>
+        /* Variables de color */
+        :root {
+            --primary-blue: #0A2540;
+            --secondary-blue: #1DA1F2;
+            --light-blue: #E8F4FA;
+            --white: #FFFFFF;
+            --text-dark: #333333;
+            --text-light: #666666;
+        }
+
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--light-blue);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        /* Navegación */
+        header {
+            background-color: var(--primary-blue);
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            color: var(--white);
+            font-size: 1.8rem;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: var(--secondary-blue);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--secondary-blue);
+        }
+
+        .btn-subscribe {
+            background-color: var(--secondary-blue);
+            color: var(--white);
+            padding: 0.5rem 1.5rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+
+        .btn-subscribe:hover {
+            background-color: #1584c9;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(10, 37, 64, 0.8), rgba(10, 37, 64, 0.8)), url('https://images.unsplash.com/photo-1519689680058-324335c77eba?auto=format&fit=crop&w=1920&q=80') center/cover;
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: var(--white);
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin-bottom: 2rem;
+            color: #d1e8ff;
+        }
+
+        .btn-primary {
+            background-color: var(--secondary-blue);
+            color: var(--white);
+            padding: 1rem 2.5rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: bold;
+            transition: transform 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            background-color: #1584c9;
+        }
+
+        /* Sección de Categorías */
+        .categories {
+            padding: 5rem 5%;
+            background-color: var(--white);
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 2.2rem;
+            color: var(--primary-blue);
+            margin-bottom: 3rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background-color: var(--light-blue);
+            padding: 2rem;
+            border-radius: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .card h3 {
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+        }
+
+        .card p {
+            color: var(--text-light);
+        }
+
+        /* Newsletter */
+        .newsletter {
+            background-color: var(--primary-blue);
+            color: var(--white);
+            text-align: center;
+            padding: 4rem 5%;
+        }
+
+        .newsletter h2 {
+            margin-bottom: 1rem;
+        }
+
+        .newsletter form {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .newsletter input {
+            padding: 1rem;
+            width: 300px;
+            border: none;
+            border-radius: 25px;
+            outline: none;
+        }
+
+        .newsletter button {
+            background-color: var(--secondary-blue);
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 1rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #051626;
+            color: var(--text-light);
+            text-align: center;
+            padding: 2rem 5%;
+        }
+
+        /* Responsividad */
+        @media (max-width: 768px) {
+            nav ul {
+                display: none; /* En un proyecto real, aquí iría un menú hamburguesa */
+            }
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="#" class="logo">Water<span>Pro</span></a>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#articulos">Artículos</a></li>
+                <li><a href="#tecnicas">Técnicas</a></li>
+                <li><a href="#entrenamiento">Entrenamiento</a></li>
+            </ul>
+        </nav>
+        <a href="#newsletter" class="btn-subscribe">Suscribirse</a>
+    </header>
+
+    <section class="hero" id="inicio">
+        <h1>Perfecciona tu Técnica en el Agua</h1>
+        <p>Análisis, rutinas de entrenamiento, consejos de nutrición y las últimas noticias del mundo de la natación. Domina cada estilo con nosotros.</p>
+        <a href="#articulos" class="btn-primary">Leer Últimos Artículos</a>
+    </section>
+
+    <section class="categories" id="tecnicas">
+        <h2 class="section-title">Explora Nuestro Contenido</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Técnica de Estilos</h3>
+                <p>Aprende la biomecánica perfecta para Crol, Espalda, Pecho y Mariposa. Evita lesiones y mejora tu eficiencia.</p>
+            </div>
+            <div class="card">
+                <h3>Entrenamiento</h3>
+                <p>Rutinas estructuradas para nadadores principiantes, intermedios y avanzados. Mejora tu resistencia y velocidad.</p>
+            </div>
+            <div class="card">
+                <h3>Nutrición y Salud</h3>
+                <p>Descubre qué comer antes y después de entrenar, y cómo cuidar tus músculos para una recuperación óptima.</p>
+            </div>
+            <div class="card">
+                <h3>Equipamiento</h3>
+                <p>Reseñas objetivas sobre gafas, bañadores técnicos, aletas y palas para que elijas lo mejor del mercado.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="newsletter" id="newsletter">
+        <h2>Únete a la Comunidad WaterPro</h2>
+        <p>Recibe semanalmente consejos exclusivos de entrenamiento y artículos destacados directamente en tu correo.</p>
+        <form action="#" method="POST">
+            <input type="email" placeholder="Tu correo electrónico" required>
+            <button type="submit">Quiero mejorar mi nado</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 WaterPro. Todos los derechos reservados. | Blog Informativo sobre Natación.</p>
+    </footer>
+
+</body>
+</html>
