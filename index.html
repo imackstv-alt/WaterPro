@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WaterPro | Tu Blog de Natación Profesional</title>
+    <title>AiresCaribe | Tu Blog de Natación Profesional</title>
     <style>
         /* Variables de color */
         :root {
@@ -211,6 +211,71 @@
             padding: 2rem 5%;
         }
 
+        footer .business-info {
+            margin-top: 0.5rem;
+            font-size: 0.95rem;
+            color: #9fb4c6;
+        }
+
+        /* Contact & Policies */
+        .contact {
+            padding: 4rem 5%;
+            background-color: var(--white);
+        }
+
+        .contact .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            align-items: start;
+        }
+
+        .contact .info {
+            background-color: var(--light-blue);
+            padding: 1.5rem;
+            border-radius: 10px;
+        }
+
+        .contact form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .contact input, .contact textarea {
+            padding: 0.9rem;
+            border-radius: 8px;
+            border: 1px solid #dbeaf7;
+            outline: none;
+            width: 100%;
+            resize: vertical;
+        }
+
+        .contact button {
+            align-self: flex-start;
+            background-color: var(--secondary-blue);
+            color: var(--white);
+            border: none;
+            padding: 0.9rem 1.5rem;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .policies {
+            padding: 4rem 5%;
+            background-color: var(--white);
+            color: var(--text-dark);
+            line-height: 1.7;
+        }
+
+        .policy-block {
+            background-color: var(--light-blue);
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin-bottom: 1.5rem;
+        }
+
         /* Responsividad */
         @media (max-width: 768px) {
             nav ul {
@@ -219,19 +284,25 @@
             .hero h1 {
                 font-size: 2.5rem;
             }
+            .contact .contact-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 <body>
 
     <header>
-        <a href="#" class="logo">Water<span>Pro</span></a>
+        <a href="#" class="logo">Aires<span>Caribe</span></a>
         <nav>
             <ul>
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#articulos">Artículos</a></li>
                 <li><a href="#tecnicas">Técnicas</a></li>
                 <li><a href="#entrenamiento">Entrenamiento</a></li>
+                <li><a href="#politica">Política y Privacidad</a></li>
+                <li><a href="#terminos">Términos y Condiciones</a></li>
+                <li><a href="#contacto">Contacto</a></li>
             </ul>
         </nav>
         <a href="#newsletter" class="btn-subscribe">Suscribirse</a>
@@ -266,7 +337,7 @@
     </section>
 
     <section class="newsletter" id="newsletter">
-        <h2>Únete a la Comunidad WaterPro</h2>
+        <h2>Únete a la Comunidad AiresCaribe</h2>
         <p>Recibe semanalmente consejos exclusivos de entrenamiento y artículos destacados directamente en tu correo.</p>
         <form action="#" method="POST">
             <input type="email" placeholder="Tu correo electrónico" required>
@@ -274,8 +345,111 @@
         </form>
     </section>
 
+    <!-- Página de Contacto real con los datos proporcionados -->
+    <section class="contact" id="contacto">
+        <h2 class="section-title">Contacto</h2>
+        <div class="contact-grid">
+            <div class="info">
+                <h3>Información del negocio</h3>
+                <p><strong>ELIANOR MONTELONGO CANSINO</strong></p>
+                <p>Cra. 78f #0-33</p>
+                <p>Bogotá, Cundinamarca, 110851</p>
+                <p>Colombia</p>
+                <p>Email: <a href="mailto:imackstv@gmail.com">imackstv@gmail.com</a></p>
+                <p style="margin-top:0.75rem; color:var(--text-light); font-size:0.95rem;">
+                    Horario de atención: Lun - Vie, 9:00 - 17:00 (hora local). <!-- horario sugerido para mayor confianza -->
+                </p>
+            </div>
+
+            <div>
+                <h3>Envíanos un mensaje</h3>
+                <form action="#" method="POST" aria-label="Formulario de contacto">
+                    <input type="text" name="nombre" placeholder="Tu nombre" required>
+                    <input type="email" name="email" placeholder="Tu correo electrónico" required>
+                    <textarea name="mensaje" rows="6" placeholder="Tu mensaje" required></textarea>
+                    <button type="submit">Enviar mensaje</button>
+                    <p style="font-size:0.9rem; color:var(--text-light); margin-top:0.75rem;">
+                        También puedes escribir directamente a <a href="mailto:imackstv@gmail.com">imackstv@gmail.com</a>
+                    </p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Políticas y Términos -->
+    <section class="policies" id="politica">
+        <h2 class="section-title">Política de Privacidad</h2>
+
+        <div class="policy-block">
+            <h3>1. Responsable del tratamiento</h3>
+            <p>ELIANOR MONTELONGO CANSINO (AiresCaribe) — Cra. 78f #0-33, Bogotá, Cundinamarca, 110851, Colombia. Email: imackstv@gmail.com</p>
+        </div>
+
+        <div class="policy-block">
+            <h3>2. Información que recopilamos</h3>
+            <p>Recopilamos la información que nos facilita el usuario de forma voluntaria (por ejemplo: nombre, email, contenido del mensaje del formulario de contacto y direcciones de correo para la suscripción). Podemos recopilar datos de uso anónimos mediante cookies y tecnologías similares para mejorar la experiencia en el sitio.</p>
+        </div>
+
+        <div class="policy-block">
+            <h3>3. Finalidad del tratamiento</h3>
+            <p>Usamos sus datos para responder consultas, enviar boletines informativos si se ha suscrito, y para fines administrativos y de mejora del servicio. No venderemos ni alquilaremos sus datos a terceros.</p>
+        </div>
+
+        <div class="policy-block">
+            <h3>4. Derechos del interesado</h3>
+            <p>Usted puede ejercer sus derechos de acceso, rectificación, supresión, oposición y portabilidad escribiendo a imackstv@gmail.com. Responderemos conforme a la normativa aplicable de protección de datos.</p>
+        </div>
+
+        <div class="policy-block">
+            <h3>5. Seguridad</h3>
+            <p>Adoptamos medidas técnicas y organizativas razonables para proteger la información contra pérdida, acceso no autorizado y divulgación.</p>
+        </div>
+
+        <div class="policy-block">
+            <h3>6. Cambios en la política</h3>
+            <p>Nos reservamos el derecho de actualizar esta política. Las modificaciones se publicarán en esta página con la fecha de revisión.</p>
+        </div>
+    </section>
+
+    <section class="policies" id="terminos">
+        <h2 class="section-title">Términos y Condiciones</h2>
+
+        <div class="policy-block">
+            <h3>1. Aceptación</h3>
+            <p>Al usar este sitio web (AiresCaribe), usted acepta estos Términos y Condiciones. Si no está de acuerdo, por favor no utilice el sitio.</p>
+        </div>
+
+        <div class="policy-block">
+            <h3>2. Uso del contenido</h3>
+            <p>El contenido publicado en este blog es informativo y de carácter general. No sustituye asesoramiento profesional personalizado. Queda prohibida la reproducción total o parcial del contenido sin autorización previa.</p>
+        </div>
+
+        <div class="policy-block">
+            <h3>3. Propiedad intelectual</h3>
+            <p>Los derechos de autor y otros derechos de propiedad intelectual sobre los contenidos y materiales del sitio pertenecen a AiresCaribe o a sus autores colaboradores. Está permitido el uso personal y no comercial citando la fuente.</p>
+        </div>
+
+        <div class="policy-block">
+            <h3>4. Limitación de responsabilidad</h3>
+            <p>AiresCaribe no será responsable por daños directos o indirectos derivados del uso del sitio ni por la fiabilidad de enlaces a terceros. La información se ofrece "tal cual" y puede contener errores o inexactitudes.</p>
+        </div>
+
+        <div class="policy-block">
+            <h3>5. Ley aplicable y jurisdicción</h3>
+            <p>Estos términos se rigen por las leyes de Colombia. Cualquier disputa será sometida a los tribunales competentes en Colombia.</p>
+        </div>
+
+        <div class="policy-block">
+            <h3>6. Contacto</h3>
+            <p>Para consultas relacionadas con estos Términos y Condiciones contacte a: <strong>ELIANOR MONTELONGO CANSINO</strong>, Cra. 78f #0-33, Bogotá, Cundinamarca, 110851, Colombia — imackstv@gmail.com</p>
+        </div>
+    </section>
+
     <footer>
-        <p>&copy; 2026 WaterPro. Todos los derechos reservados. | Blog Informativo sobre Natación.</p>
+        <p>&copy; 2026 AiresCaribe. Todos los derechos reservados. | Blog Informativo sobre Natación.</p>
+        <div class="business-info">
+            <p><strong>ELIANOR MONTELONGO CANSINO</strong> — Cra. 78f #0-33, Bogotá, Cundinamarca, 110851, Colombia · <a href="mailto:imackstv@gmail.com" style="color:inherit; text-decoration:underline;">imackstv@gmail.com</a></p>
+        </div>
     </footer>
 
 </body>
